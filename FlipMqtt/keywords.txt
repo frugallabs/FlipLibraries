@@ -1,0 +1,23 @@
+###########################################
+# Syntax Coloring Map For FlipSmartAgriculture-library
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+FlipMqtt		KEYWORD1
+mqttConnected	KEYWORD1
+mqttDisconnected	KEYWORD1
+mqttPublished	KEYWORD1
+mqttData		KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+
+begin 	KEYWORD2
+mqttSetup  KEYWORD2
+wifiSetup 	KEYWORD2
+mqttBegin 	KEYWORD2
+mqttPub 	KEYWORD2

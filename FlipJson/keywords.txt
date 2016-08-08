@@ -1,0 +1,15 @@
+###########################################
+# Syntax Coloring Map For FlipSmartAgriculture-library
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+FlipJson		KEYWORD1
+relayState  	KEYWORD1
+jsonPrint       KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################

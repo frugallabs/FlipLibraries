@@ -161,18 +161,18 @@ void FlipMqtt::mqttPub(char* s,int val)
   delay(500);
 }
 
-void FlipMqtt::mqttPub(char s[],char val[])
+void FlipMqtt::mqttPub(char* s, String* val)
 {
   esp.process();
-  /*String str_val= String(val);
+  String str_val= *val;
   int length_val=str_val.length()+1;
   char char_val[length_val];
-  str_val.toCharArray(char_val,length_val);*/
+  str_val.toCharArray(char_val,length_val);
 
   
   if(wifiConnected)
   {
-     mqtt.publish(s, val);
+     mqtt.publish(s, char_val);
   }
   delay(500);
 }

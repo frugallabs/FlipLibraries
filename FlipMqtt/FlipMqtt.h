@@ -27,7 +27,7 @@ class FlipMqtt
 			void mqttData(void* );
 			void mqttPub(char* ,int);
                        
-                void mqttPub(char [] ,char [] );
+                void mqttPub(char* ,String* );
                 void mqttSetup();
 			void wifiSetup();
 			void mqttBegin(char* ,char* );

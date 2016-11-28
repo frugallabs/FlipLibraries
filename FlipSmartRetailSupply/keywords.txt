@@ -1,0 +1,12 @@
+FlipSmartRetailSupply	KEYWORD2
+FlipMqtt		KEYWORD2
+readLdr		KEYWORD2
+readPir		KEYWORD2
+jsonPrint	KEYWORD2
+readHum		KEYWORD2
+readTempC	KEYWORD2
+mqttPub	KEYWORD2
+getRfid	KEYWORD2
+readRfid	KEYWORD2
+initWeight KEYWORD2
+getWeight	KEYWORD2

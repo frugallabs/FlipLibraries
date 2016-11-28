@@ -21,6 +21,8 @@ class FlipGlcd
   public:
           FlipGlcd();
           void glcdInit();
+		  void glcdDisp(int a);
+		  void glcdDisp(int a, int b);
           void glcdDisp(int a, int b, int c);
             
   private:

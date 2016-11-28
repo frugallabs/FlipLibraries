@@ -17,7 +17,7 @@ FlipGlcd::FlipGlcd()
 void FlipGlcd::glcdInit()
 {
   display.begin();
-  static const unsigned char PROGMEM logo16_glcd_bmp[] =
+ /* static const unsigned char PROGMEM logo16_glcd_bmp[] =
   {
     0b11111111, 0b11111111, 0b11111111, 0b11111111, // ################################
     0b11111111, 0b11111111, 0b11111111, 0b11111111, // ################################
@@ -80,7 +80,7 @@ void FlipGlcd::glcdInit()
     display.print(".");
     display.display();//-----------------------------------------------------
     delay(5);
-  }
+  }*/
   display.clearDisplay();
 }
 
@@ -111,6 +111,38 @@ void FlipGlcd::glcdDisp(int a, int b, int c)
   display.print(c);  
   display.setCursor(60,35);
   display.print("BPM"); 
+    
+  display.display();
+}
+
+void FlipGlcd::glcdDisp(int a)
+{
+  display.setCursor(0,15);  
+  display.print("Temp: ");
+  display.setCursor(40,15);
+  display.print(a);
+  display.setCursor(60,15);
+  display.print("F");  
+ 
+  display.display();
+}
+
+void FlipGlcd::glcdDisp(int a, int b)
+{
+  display.clearDisplay();
+  display.setTextSize(1);
+  
+  display.setCursor(0,0);
+  display.print("Steps: ");
+  display.setCursor(40,0);
+  display.print(a);
+    
+  display.setCursor(0,15);  
+  display.print("Temp: ");
+  display.setCursor(40,15);
+  display.print(b);
+  display.setCursor(60,15);
+  display.print("F");  
     
   display.display();
 }

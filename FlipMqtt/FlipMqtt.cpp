@@ -34,19 +34,19 @@ void FlipMqtt::mqttBegin(char* ss,char* pw)
     esp.reset();
     delay(500);
 
-    Serial.println("ESP is starting...");
+    Serial.println(F("ESP is starting..."));
     while(!esp.ready());
 
-    Serial.println("ARDUINO: setup mqtt client");
+    Serial.println(F("ARDUINO: setup mqtt client"));
     if(!mqtt.begin("DVES_duino", "admin", "Isb_C4OGD4c3", 120, 1))
     {
-      Serial.println("ARDUINO: fail to setup mqtt");
+      Serial.println(F("ARDUINO: fail to setup mqtt"));
       while(1);
     }
 
 
 
-    Serial.println("ARDUINO: settingup mqtt LWT");
+    Serial.println(F("ARDUINO: settingup mqtt LWT"));
     mqtt.lwt("flip/den/lwt", "offline", 0, 0);
     //or mqtt.lwt("/lwt", "offline");
     mqttSetup();
@@ -67,7 +67,7 @@ void FlipMqtt::wifiCb(void* response)
     
     if(status == STATION_GOT_IP)
     {
-      Serial.println("CONNECTED TO WIFI NETWORK");
+      Serial.println(F("CONNECTED TO WIFI NETWORK"));
 	 delay(10);
 	 //mqtt.connect("iot.eclipse.org", 1883, false);
       //mqtt.connect("10.10.17.237", 1883, false);
@@ -79,23 +79,23 @@ void FlipMqtt::wifiCb(void* response)
     {
       if(status == STATION_CONNECTING)
       {
-         Serial.println("WiFi is connecting...");
+         Serial.println(F("WiFi is connecting..."));
       }
       if(status == STATION_WRONG_PASSWORD)
       {
-         Serial.println("WiFi AP Wrong password");
+         Serial.println(F("WiFi AP Wrong password"));
       }
       if(status == STATION_NO_AP_FOUND)
       {
-         Serial.println("No WiFi AP Found");
+         Serial.println(F("No WiFi AP Found"));
       }
       if(status == STATION_CONNECT_FAIL)
       {
-         Serial.println("WiFi Connect fail");
+         Serial.println(F("WiFi Connect fail"));
       }
       if(status == STATION_IDLE)
       {
-         Serial.println("WiFi Idle");
+         Serial.println(F("WiFi Idle"));
       }
       wifiConnected = false;
       mqtt.disconnect();
@@ -114,7 +114,7 @@ void FlipMqtt::mqttSub(char* s)
 void FlipMqtt::mqttConnected(void* response)
 {
   //Serial.println(top);
-  Serial.println("mqtt Connected Successfully");
+  Serial.println(F("mqtt Connected Successfully"));
   delay(10);
   mqtt.subscribe(top,1);
   if(top!="null")
@@ -122,16 +122,16 @@ void FlipMqtt::mqttConnected(void* response)
 }
 void FlipMqtt::mqttDisconnected(void* response)
 {
-	Serial.println("Disconnected.");
+	Serial.println(F("Disconnected."));
 }
 void FlipMqtt::mqttData(void* response)
 {
   RESPONSE res(response);
-  Serial.print("Received: topic=");
+  Serial.print(F("Received: topic="));
   String topic = res.popString();
   Serial.println(topic);
 
-  Serial.print("data=");
+  Serial.print(F("data="));
   String data= res.popString();
   Serial.println(data);
   Serial.println(topic);

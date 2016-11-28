@@ -1,0 +1,15 @@
+###########################################
+# Syntax Coloring Map For FlipSmartAgriculture-library
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+Glcd			KEYWORD1
+glcdInit	  	KEYWORD1
+glcdDisp		KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################

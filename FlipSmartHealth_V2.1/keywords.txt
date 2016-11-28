@@ -1,0 +1,12 @@
+FlipSmartHealth	KEYWORD2
+FlipJson		KEYWORD2
+FlipMqtt		KEYWORD2
+readTemp		KEYWORD2
+getPedo		KEYWORD2
+getBpm		KEYWORD2
+getAccX		KEYWORD2
+getAccY		KEYWORD2
+getAccZ		KEYWORD2
+jsonPrint	KEYWORD2
+mqttPub	KEYWORD2
+mqttSub	KEYWORD2
